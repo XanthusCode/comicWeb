@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/*================= RESET ==================*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*================= ROOT ==================*/
+:root{
+    --titulos: #333;
+    --text:  #424242;
+    --body: #e3e6f3;
+    --fondo: #dedede;
+}
+
+  /* Global Styles */
+body{
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+h2 {
+font-size: 46px;
+line-height: 54px;
+color: #222;
+}
+
+h5{
+    font-size: 20px;
+    color: gray;
+}
+
+p {
+font-size: 16px;
+color: #7b9187;
+margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+padding: 40px 80px;
+}
+
+
+/* =============== NAVBAR ================*/
+header {
+    height: 100px;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--body);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.tittle{
+    color: rgba(0,0,0,0.2);
+    font-weight: bold;
+    font-size: 50px;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.tittle::after{
+    content: attr(title);
+    overflow: hidden;
+    position: absolute;
+    width: 0%;
+    top: 0;
+    left: 0;
+    padding: 0;
+    color: red;
+    transition: all .3s ease;
+}
+
+.tittle:hover::after{
+    width: 100%;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+#searchForm {
+    display: flex;
+    align-items: center;
+}
+
+#searchInput {
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+    width: 150px;
+    background-color: var(--body);
+}
+
+#searchInput:hover {
+    outline: none;
+    border: none;
+}
+
+#searchInput:focus {
+    width: 250px;
+    background-color: white;
+}
+
+#searchButton  {
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    margin-left: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#searchButton:hover {
+    transform: scale(1.04);
+    background-color: #0b4481;
+}
+
+
+
+/* =============== Hero ================*/
+.products,
+.dc-products{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+#product1,
+#dcCharacters{
+    text-align: center;
+}
+
+#product1 .product-container,
+#dcCharacters .product-container{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+#product1 .pro,
+#dcCharacters .pro{
+    width: 23%;
+    height: 350px;
+    min-width: 300px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+#product1 .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.06);
+   
+}
+
+#product1 .pro img,
+#dcCharacters .pro img
+{
+    padding-top: 10px;
+    width:90%;
+    height: 60%;
+    border-radius: 20px;
+}
+
+#product1 .pro .des,
+#dcCharacters .pro .des{
+    text-align: center;
+    padding: 10px 0;
+}
+
+#product1 .pro .des span,
+#dcCharacters .pro .des span{
+    color: #606063;
+    font-size: 18px;
+    text-align: center;
+}
+
+.button {
+    margin-top: 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0b4481;
+    transform: scale(1.04);
+}
+
+.details-container {
+    margin-top: 15px;
+    width: 100%;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    display: none; 
+}
+
+.dc{
+    width: 300px;
+    height: 200px;
+}
+
+.comic{
+    margin-top: 150px;
+}
+
+.modal{
+    position: fixed;
+    background-color: white;
+    box-shadow: rgba(0,0,0,0.02);
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    z-index: 9999;
+    padding: 5px;
+    border: 1px solid #cce7d0;
+}
+
+.modal-content{
+    position: relative;
+}
+
+.close{
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 150px;
+    left: 500px;
+    cursor: pointer;
+}
+
+.close:hover{
+    background-color: rgb(217, 105, 105);
+    transform: scale(1.04);
+}
+
+
+
+@keyframes changeColor {
+    0% {
+      color: white; /
+    }
+    50% {
+      color: black; /
+    }
+    100% {
+      color: gray; 
+    }
+  }
+  
+  .title {
+    animation: changeColor 3s infinite; 
+    text-align: center;
+  }
+  
+
+/* Dc Personajes */
+.product-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+/* Estilos Botones Dc y Marvel */
+.slection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.marvel,
+.button-dc,
+.all{
+    padding: 10px;
+    border: none;
+    background-color: #cce7d0;
+    border-radius: 8px;
+}
+
+
+/* ============== RESPONSIVE================= */
+
+@media (max-width: 1024px){
+    body{
+        width: 100%;
+    }
+    .section-p1{
+        padding: 20px 40px;
+    }
+
+    .products,
+    .dc-products{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+        align-items: center;
+    }
+    #product1 .pro,
+    #dcCharacters .pro{
+    width: 23%;
+    height: 350px;
+    min-width: 300px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+    .product-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 500px){
+    header {
+        padding: 10px; 
+    }
+
+    .slection {
+        margin-top: 5px;
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        padding: 10px 50px;
+    }
+
+    .slection button {
+        width: 100%; 
+        margin-bottom: 5px; 
+    }
+
+    .search {
+        margin-top: 10px; 
+    }
+
+    #searchForm {
+        display: flex;
+        justify-content: center; 
+    }
+
+    #searchInput {
+        width: 50%; 
+    }
+
+    #searchInput:focus {
+        width: 70%; 
+    }
+
+    #searchButton {
+        width: 30px; 
+    }
+
+
+    .close{
+        background-color: red;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        padding: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        position: absolute;
+        top: 400px;
+        left: 190px;
+        cursor: pointer;
+    }
+    
+    .close:hover{
+        background-color: rgb(217, 105, 105);
+        transform: scale(1.04);
+    }
+    
+    .products,
+    .dc-products{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 20px;
+        align-items: center;
+    }
+
+    .product-container {
+        width: 100%;
+    }
+
+    .dc{
+        width: 150px;
+        height: 130px;
+    }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/logos/Logo-Marvel.webp" type="image/x-icon">
+    <script type="module" src="./js/main.js" defer></script>
+    <script src="https://kit.fontawesome.com/16d365cb18.js" crossorigin="anonymous"></script>
+    <title> Comic Web </title>
+
+</head>
+<body>
+    <!-- Nav Bar -->
+    <header >
+        <button title="Comic Web" class="tittle">Comic Web</button>
+        <div class="search">
+            <form id="searchForm">
+                <input type="text" id="searchInput" placeholder="Ingrese el nombre">
+                <button type="submit" id="searchButton"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>    
+    </header>
+    <div class="slection">
+        <button class="marvel">Marvel</button> 
+        <button class="button-dc">Dc</button>  
+        <button class="all">Todos</button>
+    </div>
+
+
+    <!-- Personajes Marvel -->
+    <section  id="product1" class="section-p1">
+        <img   class="dc" src="./img/logos/Logo-Marvel.webp" alt="marvel logo">
+        <h5>Presenta:</h5>
+        <h2 class="title">Personajes De Marvel</h2>
+        <div class="products"></div>
+    </section>
+
+
+    <!-- Personajes Dc -->
+    <section id="dcCharacters" class="section-p1">
+        <img class="dc comic" src="./img/logos/dc.jpg" alt="dc logo">
+        <h5>Presenta:</h5>
+        <h2 class="title">Personajes de DC Comics</h2>
+        <div class="dc-products"></div>
+    </section>
+    
+   
+</body>
+</html>
