@@ -233,10 +233,6 @@ header {
     height: 200px;
 }
 
-.comic{
-    margin-top: 150px;
-}
-
 .modal{
     position: fixed;
     background-color: white;
@@ -304,23 +300,40 @@ header {
 .slection{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 15px;
-    margin-top: 15px;
+    margin-top: 5px;
 }
 
 .marvel,
 .button-dc,
 .all{
+    font-size: 30px;
     padding: 10px;
     border: none;
-    background-color: #cce7d0;
+    background-color: red;
     border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+
+.marvel:hover,
+.button-dc:hover,
+.all:hover{
+    background-color: rgb(212, 156, 156);
+    transform: scale(1.04);
+}
+
+.marvel:focus,
+.button-dc:focus,
+.all:focus{
+    background-color: rgb(212, 156, 156);
 }
 
 
 /* ============== RESPONSIVE================= */
-
 @media (max-width: 1024px){
     body{
         width: 100%;
@@ -359,9 +372,18 @@ header {
     }
 }
 
-@media (max-width: 500px){
+@media (max-width: 768px){
+    html{
+        transition: .5s all ease;
+    }
+
     header {
-        padding: 10px; 
+        padding: 5px; 
+    }
+    
+    .tittle{
+        font-size: 30px;
+        transition: .3s all ease;
     }
 
     .slection {
@@ -387,17 +409,26 @@ header {
     }
 
     #searchInput {
-        width: 50%; 
+        width: 60%; 
+        font-size: 12px;
     }
 
     #searchInput:focus {
         width: 70%; 
+        font-size: 20px;
     }
 
     #searchButton {
         width: 30px; 
+        border-radius: 6px;
+        padding: 5px ;
     }
 
+    #product1 .pro .des span,
+    #dcCharacters .pro .des span{
+        font-size: 22px;
+        transition: .5s all ease;
+    }
 
     .close{
         background-color: red;

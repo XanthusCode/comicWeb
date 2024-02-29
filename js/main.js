@@ -190,8 +190,8 @@ document.addEventListener("DOMContentLoaded", function() {
             modal.style.transform = 'translate(-50%, -50%)'; 
         
             const modalImage = document.createElement('img');
+           
             modalImage.src = personaje.imagen;
-            modalImage.alt = personaje.nombre;
 
             const existingImage = modalContent.querySelector('img');
             if (existingImage) {
@@ -244,6 +244,7 @@ document.addEventListener("DOMContentLoaded", function() {
     all.addEventListener('click', function() {
         marvelSection.style.display = 'block';
         dcSection.style.display = 'block';
+        
     });
 
     const searchInput = document.getElementById('searchInput');
